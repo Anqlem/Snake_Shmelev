@@ -17,10 +17,10 @@ namespace Snake_Shmelev
 	{
 		static void Main(string[] args)
 		{
-			Sounds player = new Sounds(@"C:\Users\Anqlem\source\repos\Snake_Shmelev\Snake_Shmelev\resourses");
+			Sounds player = new Sounds(@"C:\Users\Anqlem\source\repos\Snake_Shmelev\Snake_Shmelev\resourses\");
 			player.Play();
 
-			Sounds player2 = new Sounds(@"C:\Users\Anqlem\source\repos\Snake_Shmelev\Snake_Shmelev\resourses");
+			Sounds player2 = new Sounds(@"C:\Users\Anqlem\source\repos\Snake_Shmelev\Snake_Shmelev\resourses\");
 
 			Console.SetWindowSize(80, 25);
 
@@ -79,7 +79,7 @@ namespace Snake_Shmelev
 			WriteText("============================", xOffset, yOffset++);
 			WriteText("  G  A  M  E   O  V  E  R", xOffset + 1, yOffset++);
 			yOffset++;
-			WriteText("  Author : Mikhail Shmelev", xOffset + 2, yOffset++);
+			WriteText(" Author : Mikhail Shmelev", xOffset + 2, yOffset++);
 			yOffset++;
 			WriteText("============================", xOffset, yOffset++);
 			yOffset++;
@@ -104,7 +104,7 @@ namespace Snake_Shmelev
 			Console.Write("Name : ");
 			string input = Console.ReadLine();
 			if (input.Length < 3) goto again;
-			StreamWriter sw = new StreamWriter("Nimetus.txt", true);
+			StreamWriter sw = new StreamWriter("Name.txt", true);
 			sw.WriteLine($"{input}");
 			sw.Close();
 			StreamWriter psw = new StreamWriter("Points.txt", true);
